@@ -1,7 +1,5 @@
 # TO DO: Write specs for you Black Jack game
 
-# TO DO: Write specs for you hey_oh method
-
 require 'black_jack'
 
 describe '#hit' do
