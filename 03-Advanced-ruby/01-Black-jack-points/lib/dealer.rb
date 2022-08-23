@@ -30,7 +30,7 @@ def card_score(card)
         score = choice.to_i
         break
       else
-        puts 'An Ace can be A or 11. What do you want ? (1/11)'
+        puts 'An Ace can be 1 or 11. What do you want ? (1/11)'
       end
     end
   else
@@ -44,7 +44,7 @@ end
 
 # Pick card from cards
 def hit()
-  index = rand($cards.length)
+  index = rand($cards.length - 1)
   card = $cards[index]
   score = card_score(card)
   $cards.delete_at(index)
