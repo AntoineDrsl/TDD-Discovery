@@ -1,6 +1,5 @@
 # TO DO: Write a (simplified) Black Jack game.
-
-require './dealer.rb'
+require_relative 'dealer'
 
 # Global variables
 $cards = [2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11, 11]
@@ -22,7 +21,7 @@ puts "Player: #{hand_value(player_hand)}"
 # Player choice
 while hand_value(player_hand) < 21
   puts('Draw card ? (Yes/No)')
-  action = gets.chomp
+  action = STDIN.gets.chomp
   if action.downcase == 'yes' || action.downcase == 'y'
     player_hand.push(hit())
     puts "Player: #{hand_value(player_hand)}"
